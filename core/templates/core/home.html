@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar_nav %}
+{% endblock navbar_nav %}
+
+{% block content %}
+    {% include 'core/choice_form.html' %}
+    {% include 'core/contact_form.html' %}
+
+    <script src="{% static 'core/auto_submit.js' %}"></script>
+{% endblock content %}

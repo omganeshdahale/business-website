@@ -1,0 +1,11 @@
+{% load crispy_forms_tags %}
+<form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="d-none">Contact Us</legend>
+        {{ co_form|crispy }}
+    </fieldset>
+    <div class="form-group">
+        <button class="btn btn-danger btn-block" type="submit">Submit</button>
+    </div>
+</form>
