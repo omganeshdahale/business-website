@@ -1,5 +1,5 @@
 {% load crispy_forms_tags %}
-<form method="POST">
+<form method="POST" action="{% url 'contact' co_form.CONSTANT %}">
     {% csrf_token %}
     <fieldset class="form-group">
         <legend class="d-none">Contact Us</legend>

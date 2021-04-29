@@ -20,4 +20,5 @@ from core import views as core_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home, name='home'),
+    path('contact/<form_constant>/', core_views.contact, name='contact'),
 ]
