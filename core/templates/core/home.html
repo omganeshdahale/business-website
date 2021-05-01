@@ -6,12 +6,58 @@
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'core/css/home.css' %}">
 
+    <!-- Testimonials -->
+    <div class="container mt-4">
+        <h2 class="text-center" style="font-family: 'Vollkorn', serif;">Testimonials</h2>
+        <div id="testimonials" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <img class="rounded-circle testimonial-img" src="{% static 'core/img/testimonial_1.jpg' %}" alt="First slide">
+                    <h4 class="mt-2">John Doe</h4>
+                    <hr>
+                    <p>
+                        <i class="mr-2 fa fa-fw fa-quote-left"></i>
+                        Neque cupiditate assumenda in maiores repudiandae mollitia architecto.
+                    </p>
+                </div>
+                <div class="carousel-item text-center">
+                    <img class="rounded-circle testimonial-img" src="{% static 'core/img/testimonial_1.jpg' %}" alt="First slide">
+                    <h4 class="mt-2">John Doe</h4>
+                    <hr>
+                    <p>
+                        <i class="mr-2 fa fa-fw fa-quote-left"></i>
+                        Neque cupiditate assumenda in maiores repudiandae mollitia architecto.
+                    </p>
+                </div>
+                <div class="carousel-item text-center">
+                    <img class="rounded-circle testimonial-img" src="{% static 'core/img/testimonial_1.jpg' %}" alt="First slide">
+                    <h4 class="mt-2">John Doe</h4>
+                    <hr>
+                    <p>
+                        <i class="mr-2 fa fa-fw fa-quote-left"></i>
+                        Neque cupiditate assumenda in maiores repudiandae mollitia architecto.
+                    </p>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonials" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
     <div class="container-fluid mt-4 form-container-fluid">
         <div class="form-container-fluid-overlay"></div>
-        <h2 class="position-relative text-center display-4 mt-3" style="font-family: 'Vollkorn', serif;">Connect with us</h2>
+        <h2 class="position-relative text-center mt-3" style="font-family: 'Vollkorn', serif;">Connect with us</h2>
 
         <!-- Contact Form -->
-        <div class="container mb-3 position-relative form-container">
+        <div class="container mb-5 position-relative form-container">
             <div class="row form-container-row">
                 <div class="col-sm-6 rounded-left d-flex align-items-center form-social">
                     <div class="form-social-overlay"></div>
