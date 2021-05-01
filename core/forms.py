@@ -1,4 +1,4 @@
-from django.forms import ChoiceField, Select, Form, ModelForm
+from django.forms import ChoiceField, Textarea, Select, Form, ModelForm
 from .models import (
     GeneralContact,
     JoinContact,
@@ -33,6 +33,9 @@ class GeneralForm(ModelForm):
     class Meta:
         model = GeneralContact
         fields = ['name', 'email', 'message']
+        widgets = {
+            'message': Textarea(attrs={'rows': 5})
+        }
 
 
 class JoinForm(ModelForm):
