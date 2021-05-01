@@ -4,8 +4,61 @@
 {% endblock navbar_nav %}
 
 {% block content %}
-    {% include 'core/choice_form.html' %}
-    {% include 'core/contact_form.html' %}
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/home.css' %}">
 
-    <script src="{% static 'core/auto_submit.js' %}"></script>
+    <div class="container-fluid mt-4 form-container-fluid">
+        <div class="form-container-fluid-overlay"></div>
+        <h2 class="position-relative text-center display-4 mt-3" style="font-family: 'Vollkorn', serif;">Connect with us</h2>
+
+        <!-- Contact Form -->
+        <div class="container mb-3 position-relative form-container">
+            <div class="row form-container-row">
+                <div class="col-sm-6 rounded-left d-flex align-items-center form-social">
+                    <div class="form-social-overlay"></div>
+                    <div class="row mx-auto pt-2">
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" valign="top"><i class="position-relative mr-2 fa fa-fw fa-map-marker"></i></td>
+                                    <td><p class="mb-0 font-weight-bold">Address</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>1160 Cherry Ridge Drive,<br>Rochester, New York.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" valign="top"><i class="position-relative mr-2 fa fa-fw fa-phone"></i></td>
+                                    <td><p class="mb-0 font-weight-bold">Phone</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="text-dark" href="tel:#">+91 88888 88888</a></p></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" valign="top"><i class="position-relative mr-2 fa fa-fw fa-envelope"></i></td>
+                                    <td><p class="mb-0 font-weight-bold">E-mail</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="text-dark" href="mailto:#">contact@zeusgym.com</a></p></td>
+                                </tr>
+                            </table>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 rounded-right pt-2 bg-black text-light">
+                    {% include 'core/choice_form.html' %}
+                    {% include 'core/contact_form.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'core/js/auto_submit.js' %}"></script>
+
 {% endblock content %}

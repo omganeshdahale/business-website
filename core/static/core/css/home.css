@@ -1,0 +1,31 @@
+.form-container-fluid{
+    background-image: url('/static/core/img/contact_cont_bg.jpg');
+    background-position: center;
+    position: relative;
+    padding: 0;
+    overflow:hidden;
+}
+.form-container-fluid-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d50000;
+    opacity: 0.95;
+}
+.form-container-row{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+.form-social{
+    background-image: url('/static/core/img/contact_social_bg.jpg');
+    background-position: center;
+    position: relative;
+    padding: 0;
+    overflow:hidden;
+}
+.form-social-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d50000;
+    opacity: 0.8;
+}
