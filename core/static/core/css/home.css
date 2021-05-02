@@ -9,6 +9,7 @@
 .form-container-fluid{
     background-image: url('/static/core/img/contact_cont_bg.jpg');
     background-position: center;
+    background-size: cover;
     position: relative;
     padding: 0;
     overflow:hidden;
@@ -26,6 +27,7 @@
 .form-social{
     background-image: url('/static/core/img/contact_social_bg.jpg');
     background-position: center;
+    background-size: cover;
     position: relative;
     padding: 0;
     overflow:hidden;
@@ -51,6 +53,7 @@
 .about-container-fluid{
     background-image: url('/static/core/img/about_cont_bg.jpg');
     background-position: center;
+    background-size: cover;
     position: relative;
     padding: 0;
     overflow:hidden;
@@ -59,5 +62,21 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(0deg, rgba(0,0,0,0.908000700280112) 0%, rgba(0,0,0,0.7399334733893557) 100%);;
+    background: linear-gradient(0deg, rgba(0,0,0,0.908000700280112) 0%, rgba(0,0,0,0.7399334733893557) 100%);
+}
+header{
+    background-image: url('/static/core/img/header_bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    overflow:hidden;
+    min-height: 75vh;
+}
+.header-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.48503151260504207) 0%, rgba(0,0,0,0.26094187675070024) 100%);
 }
