@@ -4,3 +4,6 @@
 .bg-red{
     background-color: red;
 }
+.nav-pills .nav-link.active {
+    background-color: #dc3545 !important;
+}

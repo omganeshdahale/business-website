@@ -21,7 +21,7 @@
             {% block title%}ZEUS GYM{% endblock title%}
         </title>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="300">
         <nav class="navbar navbar-expand-md bg-black navbar-dark sticky-top">
             <!-- Brand -->
             <a class="navbar-brand" href="#" style="font-family: 'Vollkorn', serif;">ZEUS GYM</a>
@@ -33,7 +33,7 @@
 
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbar-links">
-                <ul class="navbar-nav  ml-auto">
+                <ul class="navbar-nav nav-pills ml-auto">
                     {% block navbar_nav %}{% endblock navbar_nav %}
                 </ul>
             </div>
