@@ -64,6 +64,13 @@
     width: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,0.908000700280112) 0%, rgba(0,0,0,0.7399334733893557) 100%);
 }
+.social-link{
+    font-size: 32px;
+    color: #c0c0c0;
+}
+.social-link:hover{
+    color: white;
+}
 header{
     background-image: url('/static/core/img/header_bg.jpg');
     background-attachment: fixed;
