@@ -6,8 +6,37 @@
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'core/css/home.css' %}">
 
+    <!-- Services -->
+    <section class="container mt-4">
+        <h2 class="text-center mb-3" style="font-family: 'Vollkorn', serif;">Services We Offer</h2>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'core/img/service_1.jpg' %}">
+                <div class="card-body">
+                    <h4 class="card-title">Nutrition Advice</h4>
+                    <p class="card-text">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'core/img/service_2.jpg' %}">
+                <div class="card-body">
+                    <h4 class="card-title">Personal Training</h4>
+                    <p class="card-text">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'core/img/service_3.jpg' %}">
+                <div class="card-body">
+                    <h4 class="card-title">Medical Monitoring</h4>
+                    <p class="card-text">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- About -->
-    <div class="container-fluid about-container-fluid">
+    <section class="container-fluid mt-5 about-container-fluid">
         <div class="about-container-fluid-overlay"></div>
         
         <div class="container position-relative">
@@ -19,11 +48,11 @@
             </div>
             
         </div>
-    </div>
+    </section>
 
 
     <!-- Testimonials -->
-    <div class="container mt-5">
+    <section class="container mt-5">
         <h2 class="text-center mb-3" style="font-family: 'Vollkorn', serif;">Testimonials</h2>
         <div id="testimonials" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -65,14 +94,14 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
+    </section>
 
 
-    <div class="container-fluid mt-5 form-container-fluid">
+    <!-- Contact -->
+    <section class="container-fluid mt-5 form-container-fluid">
         <div class="form-container-fluid-overlay"></div>
         <h2 class="position-relative text-center mt-3 mb-3" style="font-family: 'Vollkorn', serif;">Connect with us</h2>
 
-        <!-- Contact Form -->
         <div class="container mb-5 position-relative form-container">
             <div class="row form-container-row">
                 <div class="col-sm-6 rounded-left d-flex align-items-center form-social">
@@ -119,7 +148,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="{% static 'core/js/auto_submit.js' %}"></script>
 
