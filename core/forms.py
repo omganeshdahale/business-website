@@ -17,11 +17,10 @@ class ChoiceForm(Form):
         (JOIN_FORM, 'Join The Gym'),
         (JOB_FORM, 'Apply For Job'),
     )
-    DEFAULT = GENERAL_FORM
 
     form_name = ChoiceField(
         label='Subject',
-        initial=DEFAULT,
+        initial=GENERAL_FORM,
         choices=FORM_CHOICES,
         widget=Select(attrs={'id':'ch_form-select'}),
     )

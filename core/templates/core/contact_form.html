@@ -2,7 +2,7 @@
 {% load my_extras %}
 <div id="co_forms">
     {% for form_constant in co_forms %}
-        <form name="{{ form_constant }}_form" method="POST" action="{% url 'contact' form_constant %}">
+        <form name="{{ form_constant }}_form" method="POST" action="{% url 'contact' form_constant %}" style="display: none;">
             {% csrf_token %}
             <div class="form-group">
                 {{ co_forms|get_item:form_constant|crispy }}
