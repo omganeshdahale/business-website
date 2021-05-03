@@ -4,6 +4,7 @@ from .models import (
     JoinContact,
     JobContact)
 
+# Define form constants
 GENERAL_FORM = 'GF'
 JOIN_FORM = 'JiF'
 JOB_FORM = 'JbF'
@@ -27,7 +28,6 @@ class ChoiceForm(Form):
 
 
 class GeneralForm(ModelForm):
-    CONSTANT = GENERAL_FORM
     NAME_IN_EMAIL = 'General Inquiry'
 
     class Meta:
@@ -39,7 +39,6 @@ class GeneralForm(ModelForm):
 
 
 class JoinForm(ModelForm):
-    CONSTANT = JOIN_FORM
     NAME_IN_EMAIL = 'Join Inquiry'
 
     class Meta:
@@ -48,9 +47,16 @@ class JoinForm(ModelForm):
 
 
 class JobForm(ModelForm):
-    CONSTANT = JOB_FORM
     NAME_IN_EMAIL = 'Job Inquiry'
 
     class Meta:
         model = JobContact
         fields = ['name', 'email', 'phone']
+
+
+# Map form constants
+CONTACT_FORMS = {
+    GENERAL_FORM: GeneralForm,
+    JOIN_FORM: JoinForm,
+    JOB_FORM: JobForm,
+}

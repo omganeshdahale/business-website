@@ -1,11 +1,15 @@
 {% load crispy_forms_tags %}
-<form method="POST" action="{% url 'contact' co_form.CONSTANT %}">
-    {% csrf_token %}
-    <fieldset class="form-group">
-        <legend class="d-none">Contact Us</legend>
-        {{ co_form|crispy }}
-    </fieldset>
-    <div class="form-group">
-        <button class="btn btn-block btn-danger bg-red text-light" type="submit">Submit</button>
-    </div>
-</form>
+{% load my_extras %}
+<div id="co_forms">
+    {% for form_constant in co_forms %}
+        <form name="{{ form_constant }}_form" method="POST" action="{% url 'contact' form_constant %}">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ co_forms|get_item:form_constant|crispy }}
+            </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-danger bg-red text-light" type="submit">Submit</button>
+            </div>
+        </form>
+    {% endfor %}
+</div>

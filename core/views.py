@@ -5,42 +5,19 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from myproject.settings import EMAIL_HOST_USER
-from .forms import (
-    ChoiceForm,
-    GeneralForm,
-    JoinForm,
-    JobForm)
-
-CONTACT_FORMS = {
-    GeneralForm.CONSTANT: GeneralForm,
-    JoinForm.CONSTANT: JoinForm,
-    JobForm.CONSTANT: JobForm,
-}
+from .forms import ChoiceForm, CONTACT_FORMS
 
 def home(request):
-    if request.method == 'POST':
-        ch_form = ChoiceForm(request.POST)
 
-        if ch_form.is_valid():
-            cd = ch_form.cleaned_data
-            # get and instantiate form
-            co_form = CONTACT_FORMS[cd.get('form_name')]()
-
-        else:
-            ch_form = ChoiceForm()
-            co_form = CONTACT_FORMS[ChoiceForm.DEFAULT]
-
-            msg = 'No form available for given subject!'
-            messages.error(request, msg)
-
-    else:
-        ch_form = ChoiceForm()
-        co_form = CONTACT_FORMS[ChoiceForm.DEFAULT]
+    co_forms = {}
+    for form_constant in CONTACT_FORMS:
+        co_forms[form_constant] = CONTACT_FORMS[form_constant]()
 
     context = {
-        'ch_form': ch_form,
-        'co_form': co_form,
+        'ch_form': ChoiceForm(),
+        'co_forms': co_forms
     }
+
     return render(request, 'core/home.html', context)
 
 def contact(request, form_constant):
