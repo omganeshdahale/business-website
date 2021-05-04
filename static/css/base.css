@@ -1,0 +1,23 @@
+html{
+    scroll-behavior: smooth;
+}
+:target::before{
+    content: "";
+    display: block;
+    height: 70px; /* fixed header height*/
+    margin: -70px 0 0; /* negative fixed header height */
+}
+.bg-black{
+    background-color: black;
+}
+.bg-red{
+    background-color: red;
+}
+.nav-pills .nav-link.active {
+    background-color: #dc3545 !important;
+}
+.brand-icon{
+    height: 46px;
+    width: 46px;
+    margin: 1px 0;
+}

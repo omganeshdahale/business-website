@@ -1,0 +1,12 @@
+{% load my_extras %}
+<h1 style="font-size: 23px; color: #555555;">
+    New {{ NAME_IN_EMAIL }}
+</h1>
+<hr>
+{% for field in cd %}
+    <p style="font-size: 14px; color: #555555;">
+        <b>{{ field|lower|capfirst }} :</b> {{ cd|get_item:field }}
+    </p>
+{% endfor %}
+<hr>
+<p style="font-size: 14px; color: #555555">This is an automatic email please do not reply.</p>

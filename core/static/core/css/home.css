@@ -1,0 +1,89 @@
+@media only screen and (min-width: 522px){
+    h2{
+        /*display-4*/
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+}
+.form-container-fluid{
+    background-image: url('/static/core/img/contact_cont_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    overflow:hidden;
+}
+.form-container-fluid-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d50000;
+    opacity: 0.95;
+}
+.form-container-row{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+.form-social{
+    background-image: url('/static/core/img/contact_social_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    overflow:hidden;
+}
+.form-social-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d50000;
+    opacity: 0.8;
+}
+.testimonial-img{
+    height: 125px;
+    width: 125px;
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.about-container-fluid{
+    background-image: url('/static/core/img/about_cont_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    overflow:hidden;
+}
+.about-container-fluid-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.908000700280112) 0%, rgba(0,0,0,0.7399334733893557) 100%);
+}
+.social-link{
+    font-size: 32px;
+    color: #c0c0c0;
+}
+.social-link:hover{
+    color: white;
+}
+.header-container-fluid{
+    background-image: url('/static/core/img/header_bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    overflow:hidden;
+    min-height: 75vh;
+}
+.header-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.48503151260504207) 0%, rgba(0,0,0,0.26094187675070024) 100%);
+}

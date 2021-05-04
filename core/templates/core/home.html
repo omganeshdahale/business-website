@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar_nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="#header">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#services">Services</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+    </li>
+{% endblock navbar_nav %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/home.css' %}">
+
+    <!-- Header -->
+    <header id="header">
+    <div class="container-fluid d-flex align-items-center p-0 header-container-fluid">
+        <div class="header-overlay"></div>
+        <div class="position-relative w-100 text-center">
+            <h1 class="display-1 text-white mt-3" style="font-family: 'Vollkorn', serif;">ZEUS GYM</h1>
+            <a class="btn btn-lg btn-danger text-light bg-red mt-4 mb-3 px-5" href="#services">Discover</a>
+        </div>
+    </div>
+    </header>
+
+
+    <!-- Services -->
+    <section id="services" class="container mt-5">
+        <h2 class="text-center mb-3" style="font-family: 'Vollkorn', serif;">Services We Offer</h2>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'core/img/service_1.jpg' %}">
+                <div class="card-body">
+                    <h4 class="card-title">Nutrition Advice</h4>
+                    <p class="card-text">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'core/img/service_2.jpg' %}">
+                <div class="card-body">
+                    <h4 class="card-title">Personal Training</h4>
+                    <p class="card-text">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'core/img/service_3.jpg' %}">
+                <div class="card-body">
+                    <h4 class="card-title">Medical Monitoring</h4>
+                    <p class="card-text">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="mt-5">
+    <div class="container-fluid about-container-fluid">
+        <div class="about-container-fluid-overlay"></div>
+        
+        <div class="container position-relative">
+            <div class="row mt-5 mb-4">
+                <div class="col-sm-6">
+                    <h2 class="text-white mb-3" style="font-family: 'Vollkorn', serif;">About Zeus Gym</h2>
+                    <p class="text-light">Donec vestibulum libero sed massa porttitor, et eleifend nunc egestas. Vestibulum vel nisl ut ante euismod pulvinar nec in dolor. Vivamus vulputate molestie turpis non scelerisque. Sed in interdum erat. Nulla neque magna, mattis vehicula ipsum eget, sagittis pulvinar purus. Quisque malesuada dolor sed tempor ultrices. Ut sollicitudin, ex non ullamcorper bibendum, tortor nibh porttitor elit, tempor mattis magna lacus et nunc. Proin nisi lorem, feugiat nec molestie vel, elementum non odio. Nullam aliquet vel ex eu aliquet. Curabitur ornare, elit ac pulvinar rutrum, odio nisl sollicitudin ante, eget mollis mauris odio vel tortor. Nunc vestibulum lacus ut nulla tincidunt, non molestie erat vehicula. In vitae iaculis ex, pretium finibus erat. Nullam varius sodales risus non iaculis.</p>
+                    <p class="mt-4">
+                        <a class="social-link" href="#"><i class="fa fa-fw fa-facebook-f mr-2"></i></a>
+                        <a class="social-link" href="#"><i class="fa fa-fw fa-twitter mr-2"></i></a>
+                        <a class="social-link" href="#"><i class="fa fa-fw fa-instagram mr-2"></i></a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="container mt-5">
+        <h2 class="text-center mb-3" style="font-family: 'Vollkorn', serif;">Testimonials</h2>
+        <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <img class="rounded-circle testimonial-img" src="{% static 'core/img/testimonial_1.jpg' %}" alt="First slide">
+                    <h4 class="mt-2">John Doe</h4>
+                    <hr>
+                    <p>
+                        <i class="mr-2 fa fa-fw fa-quote-left"></i>
+                        Neque cupiditate assumenda in maiores repudiandae mollitia architecto.
+                    </p>
+                </div>
+                <div class="carousel-item text-center">
+                    <img class="rounded-circle testimonial-img" src="{% static 'core/img/testimonial_1.jpg' %}" alt="First slide">
+                    <h4 class="mt-2">John Doe</h4>
+                    <hr>
+                    <p>
+                        <i class="mr-2 fa fa-fw fa-quote-left"></i>
+                        Neque cupiditate assumenda in maiores repudiandae mollitia architecto.
+                    </p>
+                </div>
+                <div class="carousel-item text-center">
+                    <img class="rounded-circle testimonial-img" src="{% static 'core/img/testimonial_1.jpg' %}" alt="First slide">
+                    <h4 class="mt-2">John Doe</h4>
+                    <hr>
+                    <p>
+                        <i class="mr-2 fa fa-fw fa-quote-left"></i>
+                        Neque cupiditate assumenda in maiores repudiandae mollitia architecto.
+                    </p>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#testimonials-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonials-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="mt-5">
+    <div class="container-fluid form-container-fluid">
+        <div class="form-container-fluid-overlay"></div>
+        <h2 class="position-relative text-center mt-3 mb-3" style="font-family: 'Vollkorn', serif;">Connect with us</h2>
+
+        <div class="container mb-5 position-relative form-container">
+            <div class="row form-container-row">
+                <div class="col-sm-6 rounded-left d-flex align-items-center form-social">
+                    <div class="form-social-overlay"></div>
+                    <div class="row mx-auto pt-2">
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" valign="top"><i class="position-relative mr-2 fa fa-fw fa-map-marker"></i></td>
+                                    <td><p class="mb-0 font-weight-bold">Address</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>1160 Cherry Ridge Drive,<br>Rochester, New York.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" valign="top"><i class="position-relative mr-2 fa fa-fw fa-phone"></i></td>
+                                    <td><p class="mb-0 font-weight-bold">Phone</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="text-dark" href="tel:#">+91 88888 88888</a></p></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" valign="top"><i class="position-relative mr-2 fa fa-fw fa-envelope"></i></td>
+                                    <td><p class="mb-0 font-weight-bold">E-mail</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="text-dark" href="mailto:#">contact@zeusgym.com</a></p></td>
+                                </tr>
+                            </table>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 rounded-right pt-2 bg-black text-light">
+                    {% include 'core/choice_form.html' %}
+                    {% include 'core/contact_form.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script src="{% static 'core/js/form_switcher.js' %}"></script>
+
+{% endblock content %}
