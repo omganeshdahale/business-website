@@ -16,3 +16,8 @@ html{
 .nav-pills .nav-link.active {
     background-color: #dc3545 !important;
 }
+.brand-icon{
+    height: 46px;
+    width: 46px;
+    margin: 1px 0;
+}

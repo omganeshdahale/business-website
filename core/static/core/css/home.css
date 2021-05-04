@@ -71,7 +71,7 @@
 .social-link:hover{
     color: white;
 }
-header{
+.header-container-fluid{
     background-image: url('/static/core/img/header_bg.jpg');
     background-attachment: fixed;
     background-position: center;

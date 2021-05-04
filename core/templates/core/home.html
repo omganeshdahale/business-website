@@ -19,12 +19,14 @@
     <link rel="stylesheet" type="text/css" href="{% static 'core/css/home.css' %}">
 
     <!-- Header -->
-    <header id="header" class="container-fluid d-flex align-items-center p-0">
+    <header id="header">
+    <div class="container-fluid d-flex align-items-center p-0 header-container-fluid">
         <div class="header-overlay"></div>
         <div class="position-relative w-100 text-center">
             <h1 class="display-1 text-white mt-3" style="font-family: 'Vollkorn', serif;">ZEUS GYM</h1>
             <a class="btn btn-lg btn-danger text-light bg-red mt-4 mb-3 px-5" href="#services">Discover</a>
         </div>
+    </div>
     </header>
 
 
@@ -58,7 +60,8 @@
 
 
     <!-- About -->
-    <section id="about" class="container-fluid mt-5 about-container-fluid">
+    <section id="about" class="mt-5">
+    <div class="container-fluid about-container-fluid">
         <div class="about-container-fluid-overlay"></div>
         
         <div class="container position-relative">
@@ -75,6 +78,7 @@
             </div>
             
         </div>
+    </div>
     </section>
 
 
@@ -125,7 +129,8 @@
 
 
     <!-- Contact -->
-    <section id="contact" class="container-fluid mt-5 form-container-fluid">
+    <section id="contact" class="mt-5">
+    <div class="container-fluid form-container-fluid">
         <div class="form-container-fluid-overlay"></div>
         <h2 class="position-relative text-center mt-3 mb-3" style="font-family: 'Vollkorn', serif;">Connect with us</h2>
 
@@ -175,6 +180,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <script src="{% static 'core/js/form_switcher.js' %}"></script>
