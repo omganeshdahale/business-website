@@ -10,8 +10,8 @@ from .forms import ChoiceForm, CONTACT_FORMS
 def home(request):
 
     co_forms = {}
-    for form_constant in CONTACT_FORMS:
-        co_forms[form_constant] = CONTACT_FORMS[form_constant]()
+    for form_string in CONTACT_FORMS:
+        co_forms[form_string] = CONTACT_FORMS[form_string]()
 
     context = {
         'ch_form': ChoiceForm(),
@@ -20,10 +20,10 @@ def home(request):
 
     return render(request, 'core/home.html', context)
 
-def contact(request, form_constant):
+def contact(request, form_string):
     if request.method == 'POST':
         try:
-            form = CONTACT_FORMS[form_constant](request.POST)
+            form = CONTACT_FORMS[form_string](request.POST)
             if form.is_valid():
                 form.save()
 
@@ -34,9 +34,9 @@ def contact(request, form_constant):
 
                 cd = form.cleaned_data
                 try:
-                    NAME_IN_EMAIL = form.NAME_IN_EMAIL 
+                    name_in_email = form.name_in_email 
                 except AttributeError:
-                    NAME_IN_EMAIL = 'Contact'
+                    name_in_email = 'Contact'
 
                 # send thanks email to user
                 if 'email' in cd:
@@ -50,10 +50,10 @@ def contact(request, form_constant):
                         to, html_message=html)
 
                 # send notification email to admins
-                subject = f'New {NAME_IN_EMAIL}'
+                subject = f'New {name_in_email}'
                 html = render_to_string(
                     'email/contact_notify.html',
-                    {'NAME_IN_EMAIL': NAME_IN_EMAIL, 'cd': cd}
+                    {'name_in_email': name_in_email, 'cd': cd}
                 )
                 plain = strip_tags(html)
                 from_ = EMAIL_HOST_USER

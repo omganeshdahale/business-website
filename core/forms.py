@@ -4,9 +4,9 @@ from .models import (
     JoinContact,
     JobContact)
 
-# Define form constants
+# Define form strings (urlsafe)
 GENERAL_FORM = 'GF'
-JOIN_FORM = 'JiF'
+JOIN_FORM = 'JnF'
 JOB_FORM = 'JbF'
 
 class ChoiceForm(Form):
@@ -27,7 +27,7 @@ class ChoiceForm(Form):
 
 
 class GeneralForm(ModelForm):
-    NAME_IN_EMAIL = 'General Inquiry'
+    name_in_email = 'General Inquiry'
 
     class Meta:
         model = GeneralContact
@@ -38,7 +38,7 @@ class GeneralForm(ModelForm):
 
 
 class JoinForm(ModelForm):
-    NAME_IN_EMAIL = 'Join Inquiry'
+    name_in_email = 'Join Inquiry'
 
     class Meta:
         model = JoinContact
@@ -46,14 +46,14 @@ class JoinForm(ModelForm):
 
 
 class JobForm(ModelForm):
-    NAME_IN_EMAIL = 'Job Inquiry'
+    name_in_email = 'Job Inquiry'
 
     class Meta:
         model = JobContact
         fields = ['name', 'email', 'phone']
 
 
-# Map form constants
+# Map form strings
 CONTACT_FORMS = {
     GENERAL_FORM: GeneralForm,
     JOIN_FORM: JoinForm,
