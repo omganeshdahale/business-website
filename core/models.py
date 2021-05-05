@@ -9,7 +9,7 @@ class Contact(models.Model):
     email = models.EmailField(max_length=100)
 
     def __str__(self):
-        return f'{self.date_created} - {self.name}'
+        return f'{self.date_created:%b %-d, %Y} : {self.name}'
 
     class Meta:
         abstract = True
