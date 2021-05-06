@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views as core_views
+from newsletter import views as newsletter_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home, name='home'),
-    path('contact/<form_constant>/', core_views.contact, name='contact'),
+    path('contact/<form_string>/', core_views.contact, name='contact'),
+    path('subscribe/', newsletter_views.subscribe, name='subscribe'),
+    path('confirm/', newsletter_views.confirm, name='confirm'),
+    path('unsubscribe/', newsletter_views.unsubscribe, name='unsubscribe'),
 ]

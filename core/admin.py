@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import GeneralContact, JoinContact, JobContact
 
-admin.site.register(GeneralContact)
-admin.site.register(JoinContact)
-admin.site.register(JobContact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'date_created')
+
+admin.site.register(GeneralContact, ContactAdmin)
+admin.site.register(JoinContact, ContactAdmin)
+admin.site.register(JobContact, ContactAdmin)

@@ -1,11 +1,11 @@
 {% load crispy_forms_tags %}
 {% load my_extras %}
 <div id="co_forms">
-    {% for form_constant in co_forms %}
-        <form name="{{ form_constant }}_form" method="POST" action="{% url 'contact' form_constant %}" style="display: none;">
+    {% for form_string in co_forms %}
+        <form name="{{ form_string }}_form" method="POST" action="{% url 'contact' form_string %}" style="display: none;">
             {% csrf_token %}
             <div class="form-group">
-                {{ co_forms|get_item:form_constant|crispy }}
+                {{ co_forms|get_item:form_string|crispy }}
             </div>
             <div class="form-group">
                 <button class="btn btn-block btn-danger bg-red text-light" type="submit">Submit</button>
