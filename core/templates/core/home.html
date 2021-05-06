@@ -183,6 +183,20 @@
     </div>
     </section>
 
+
+    <section id="newsletter" class="py-4">
+        <div class="container text-light">
+            <div class="row">
+                <div class="col-sm-6 d-flex align-items-center">
+                    <h2 class="mb-3 text-center" style="font-family: 'Vollkorn', serif;">Consider Subscribing?</h2>
+                </div>
+                <div class="col-sm-6">
+                    {% include 'newsletter/news_form.html' %}
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="{% static 'core/js/form_switcher.js' %}"></script>
 
 {% endblock content %}

@@ -6,6 +6,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from myproject.settings import EMAIL_HOST_USER
 from .forms import ChoiceForm, CONTACT_FORMS
+from newsletter.forms import SubscriberForm
 
 def home(request):
 
@@ -15,7 +16,8 @@ def home(request):
 
     context = {
         'ch_form': ChoiceForm(),
-        'co_forms': co_forms
+        'co_forms': co_forms,
+        'news_form': SubscriberForm(),
     }
 
     return render(request, 'core/home.html', context)

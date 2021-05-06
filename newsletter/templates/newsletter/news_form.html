@@ -1,0 +1,8 @@
+{% load crispy_forms_tags %}
+<form name="news_form" method="POST" action="{% url 'subscribe' %}">
+    {% csrf_token %}
+
+    {{ news_form|crispy }}
+    <button class="btn btn-danger btn-block text-light bg-red" type="submit">Subscribe!</button>
+
+</form>

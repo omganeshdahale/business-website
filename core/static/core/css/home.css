@@ -6,6 +6,9 @@
         line-height: 1.2;
     }
 }
+#newsletter{
+    background-color: #101010;
+}
 .form-container-fluid{
     background-image: url('/static/core/img/contact_cont_bg.jpg');
     background-position: center;
