@@ -1,7 +1,7 @@
 from django.db import models
 
 class Subscriber(models.Model):
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=True, max_length=100)
     conf_token = models.CharField(max_length=43)
     confirmed = models.BooleanField(default=False)
 
