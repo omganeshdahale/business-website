@@ -1,4 +1,10 @@
-from django.forms import ChoiceField, Textarea, Select, Form, ModelForm
+from django.forms import (
+    ChoiceField,
+    TextInput,
+    Textarea,
+    Select,
+    Form,
+    ModelForm)
 from .models import (
     GeneralContact,
     JoinContact,
@@ -8,6 +14,12 @@ from .models import (
 GENERAL_FORM = 'GF'
 JOIN_FORM = 'JnF'
 JOB_FORM = 'JbF'
+
+phone_attrs = {
+    'type': 'tel',
+    'pattern': r'^\d{4,15}$',
+    'title': 'Only digits are allowed and length must be between 4 to 15.',
+}
 
 class ChoiceForm(Form):
     '''Form to choose type of form'''
@@ -42,7 +54,10 @@ class JoinForm(ModelForm):
 
     class Meta:
         model = JoinContact
-        fields = ['name', 'email', 'phone']
+        fields = ['name', 'email', 'dial_code', 'phone']
+        widgets = {
+            'phone': TextInput(attrs=phone_attrs)
+        }
 
 
 class JobForm(ModelForm):
@@ -50,7 +65,10 @@ class JobForm(ModelForm):
 
     class Meta:
         model = JobContact
-        fields = ['name', 'email', 'phone']
+        fields = ['name', 'email', 'dial_code', 'phone']
+        widgets = {
+            'phone': TextInput(attrs=phone_attrs)
+        }
 
 
 # Map form strings

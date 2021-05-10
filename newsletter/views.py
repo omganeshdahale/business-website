@@ -43,6 +43,9 @@ def subscribe(request):
             msg += ' please see the email we sent you to confirm its you.'
             messages.success(request, msg)
 
+        else:
+            messages.error(request, 'Form is invalid.')
+
     return redirect('home')
 
 def confirm(request):

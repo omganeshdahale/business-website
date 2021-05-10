@@ -65,6 +65,9 @@ def contact(request, form_string):
                 send_mail(subject, plain, from_,
                     to, html_message=html)
 
+            else:
+                messages.error(request, 'Form is invalid.')
+
         except KeyError:
             messages.error(request, 'Invalid URL')
 
