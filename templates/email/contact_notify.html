@@ -1,12 +1,16 @@
 {% load my_extras %}
-<h1 style="font-size: 23px; color: #555555;">
-    New {{ name_in_email }}
-</h1>
-<hr>
+
+<h1 style="color: #555555;font-size: 23px;">{{ cd.name }}</h1>
+<hr style="margin-top: 1rem;margin-bottom: 1rem;border: 0;border-top: 1px solid rgba(0,0,0,.1);">
+
+<table>
 {% for field in cd %}
-    <p style="font-size: 14px; color: #555555;">
-        <b>{{ field|lower|capfirst }} :</b> {{ cd|get_item:field }}
-    </p>
+    <tr>
+        <td style="vertical-align: top;padding-right: 15px;font-weight: bold;"><p style="color: #555555;font-size: 14px;margin-top: 0;">{{ field|underscore_to_space|title }}</p></td>
+        <td style="vertical-align: top;"><p style="color: #555555;font-size: 14px;margin-top: 0;">{{ cd|get_item:field }}</p></td>
+    </tr>
 {% endfor %}
-<hr>
-<p style="font-size: 14px; color: #555555">This is an automatic email please do not reply.</p>
+</table>
+
+<hr style="margin-top: 1rem;margin-bottom: 1rem;border: 0;border-top: 1px solid rgba(0,0,0,.1);">
+<small style="color: #555555;font-size: 12px;">This is an automatic email please do not reply.</small>

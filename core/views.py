@@ -55,7 +55,7 @@ def contact(request, form_string):
                 subject = f'New {name_in_email}'
                 html = render_to_string(
                     'email/contact_notify.html',
-                    {'name_in_email': name_in_email, 'cd': cd}
+                    {'cd': cd}
                 )
                 plain = strip_tags(html)
                 from_ = EMAIL_HOST_USER
