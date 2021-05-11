@@ -13,8 +13,11 @@ def send_newsletter(modeladmin, request, queryset):
 
             subject = newsletter.subject
             html = newsletter.body
-            html += f'<hr><small>don\'t want to recieve emails? you can'
-            html += f' <a href={url}>unsubscribe here.</a></small>'
+            html += ('<hr style="margin-top: 1rem;margin-bottom: 1rem;'
+                'border: 0;border-top: 1px solid rgba(0,0,0,.1);">'
+                '<small style="font-size: 12px;color: #555555">'
+                'don\'t want to recieve emails? you can '
+                f'<a href={url}>unsubscribe here.</a></small>')
             plain = strip_tags(html)
             from_ = EMAIL_HOST_USER
             to = sub.email
